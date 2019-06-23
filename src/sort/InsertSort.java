@@ -27,6 +27,7 @@ public class InsertSort {
         int len = arr.length;
         for (int i=1;i<len;i++){
             //临时存储
+
             int temp = arr[i];
             int j;
             //找到上一个元素，进行比较，大则进行交换
