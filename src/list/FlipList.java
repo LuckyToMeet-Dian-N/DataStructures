@@ -51,7 +51,6 @@ public class FlipList {
         listNode2.next=listNode3;
         ListNode listNode4 = new ListNode(51);
         listNode3.next=listNode4;
-
         ListNode listNode5 = flipList(listNode);
         System.out.println();
         printlnListNode(listNode5);
