@@ -1,12 +1,14 @@
 package tree;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author Gentle
  * 得到二叉树的镜像  —— 递归的方式
  */
-public class Solution {
+public class MyTreeLearn {
 
     /**
      * 翻转二叉树
@@ -102,6 +104,7 @@ public class Solution {
         result.add(root.val);
         preOrder2(root.left,result);
         preOrder2(root.right,result);
+        
     }
 
     /**
@@ -114,9 +117,19 @@ public class Solution {
         if(root == null){
             return list;
         }
+
         list.addAll(postOrder(root.left));
         list.addAll(postOrder(root.right));
         list.add(root.val);
         return list;
+    }
+
+    public static void main(String[] args) {
+
+        Integer a = 101;
+        String b = "";
+
+        System.out.println(a%100);
+
     }
 }
