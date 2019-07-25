@@ -1,5 +1,9 @@
 package array;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
 /**
  * 数组的二分查找
  *
@@ -46,6 +50,7 @@ public class DichotomySelect {
                 low = center + 1;
             } else {
                 return center;
+
             }
         }
         return -1;
@@ -53,10 +58,16 @@ public class DichotomySelect {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1,2,3,4,5,6,7,8,9};
-
         int i = dichotomvSelect(arr, 4);
         System.out.println(i);
 
 
+       String a  = "12";
+       String b= "c";
+
+
+
     }
+
+
 }

@@ -126,10 +126,19 @@ public class MyTreeLearn {
 
     public static void main(String[] args) {
 
-        Integer a = 101;
-        String b = "";
+        int hash = hash("htps");
+        int hash1 = hash("http");
+        int hash2 = hash("http://ggjajfaiojriao.com/abc");
+        int i =1024;
 
-        System.out.println(a%100);
+        System.out.println(hash&(i-1));
+        System.out.println(hash1&(i-1));
+        System.out.println(hash2&(i-1));
 
+
+    }
+    static final int hash(Object key) {
+        int h;
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
     }
 }
