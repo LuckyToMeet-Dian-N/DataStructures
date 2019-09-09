@@ -6,12 +6,16 @@ import java.util.Queue;
 import java.util.Set;
 
 /**
+ * 图的搜索
  * @author Gentle
  * @date 2019/08/08 : 15:52
  */
 public class Chart {
 
-    //使用Queue实现BFS
+    /**
+     *   使用Queue实现BFS
+     * @param root
+     */
     public void BFSWithQueue(Node root) {
         Queue<Node> queue = new LinkedList<>();
         if (root != null) {

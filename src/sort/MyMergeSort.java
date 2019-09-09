@@ -1,6 +1,12 @@
 package sort;
 
-public class myMergeSort {
+import java.util.Arrays;
+
+/**
+ * 归并排序
+ * @author Gentle
+ */
+public class MyMergeSort {
 
     public static void main(String[] args) {
         int[] a = {26, 5, 98, 108, 28, 99, 100, 56, 34, 1};
@@ -51,7 +57,6 @@ public class myMergeSort {
 
 
     private static void merge(int[] a, int left, int mid, int right) {
-
         int[] tmp = new int[a.length];
         int r1 = mid + 1;
         int tIndex = left;
@@ -72,13 +77,11 @@ public class myMergeSort {
         while (r1 <= right) {
             tmp[tIndex++] = a[r1++];
         }
-
         //从临时数组拷贝到原数组
         while (cIndex <= right) {
             a[cIndex] = tmp[cIndex];
             cIndex++;
         }
-
     }
 
 

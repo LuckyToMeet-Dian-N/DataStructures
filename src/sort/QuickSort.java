@@ -10,10 +10,12 @@ import java.util.Arrays;
  */
 public class QuickSort {
 
+
     /**
-     *  排序后的数组
-     * @param list 需要排序的数组
-     * @param left 索引
+     * 排序后的数组
+     *
+     * @param list  需要排序的数组
+     * @param left  索引
      * @param right 索引
      * @return
      */
@@ -25,20 +27,21 @@ public class QuickSort {
         int temp = list[left];
         int i = left;
         int j = right;
-        while (i<j){
-            while (list[j]>=temp&& i<j){
+        while (i < j) {
+            while (list[j] >= temp && i < j) {
                 j--;
             }
-            list[i]=list[j];
-            while (list[i]<=temp&&i<j){
+            list[i] = list[j];
+            while (list[i] <= temp && i < j) {
                 i++;
             }
-           list[j]=list[i];
+            list[j] = list[i];
+
         }
 
-        list[i]=temp;
-        quickSort(list,left,right-1);
-        quickSort(list,left+1,right);
+        list[i] = temp;
+        quickSort(list, left, right - 1);
+        quickSort(list, left + 1, right);
 
         return Arrays.toString(list);
     }
@@ -46,6 +49,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] arr = {111, 3, 5, 52, 74, 312, 75, 3, 764, 3, 2111, 7, 31};
         System.out.println("排序后的数组：" + quickSort(arr, 0, arr.length - 1));
+
     }
 
 }
